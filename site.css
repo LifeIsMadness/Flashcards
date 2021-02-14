@@ -1,0 +1,83 @@
+body {
+    background: url("https://static2.aniimg.com/upload/20170509/361/L/i/t/LitEEF.png");
+    background-size: auto;
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: #050505;
+}
+
+.grid-container {
+    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 35%;
+}
+
+.flip-card{
+    background-color: transparent;
+    perspective: 1000px;
+    height: 200px;
+    width: 200px;
+}
+
+.card {
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    height: 200px;
+    /*width: 200px;*/
+}
+
+.front, .back {
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.front {
+
+
+}
+
+
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.front p {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+
+
+.back {
+    background: aqua;
+    transform: rotateY(180deg);
+}
+
+.card p {
+    font-size: 1.5vw;
+}
+
+.flip-card:hover .card{
+    transform: rotateY(180deg);
+}
+
+
